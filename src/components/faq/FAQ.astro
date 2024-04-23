@@ -1,0 +1,27 @@
+---
+import { Accordion, AccordionItem, Link } from "@nextui-org/react";
+import FaqAcordeon from "./FaqAcordeon";
+---
+
+<section
+  class="flex flex-col w-full bg-[#000] text-slate-50 items-center justify-center px-4 py-8 gap-12"
+>
+  <h1
+    class="p-0 m-0 text-3xl md:text-5xl font-extrabold text-center w-full bg-gradient-to-r from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+  >
+    FAQ
+  </h1>
+  <p
+    class="text-justify text-slate-300 text-sm md:text-lg max-w-prose font-mono pb-12 font-bold"
+  >
+    If you have any questions and it has not been resolved, hit us at
+    <Link
+      className="font-bold hover:text-slate-500 underline"
+      target="_blank"
+      href="mailto:opiredev@gmail.com"
+    >
+      opiredev@gmail.com
+    </Link>
+  </p>
+  <FaqAcordeon client:visible />
+</section>

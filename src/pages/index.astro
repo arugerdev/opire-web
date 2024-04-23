@@ -1,0 +1,127 @@
+---
+import { Divider, Image, Link } from "@nextui-org/react";
+import Layout from "../layouts/Layout.astro";
+import BeginButtons from "../components/home/BeginButtons";
+import InfoCard from "../components/home/InfoCard";
+---
+
+<Layout title="Opire">
+  <main
+    class="flex flex-col items-center justify-center margin-auto p-4 w-full text-white text-xl"
+  >
+    <section class="flex flex-col gap-2 py-4 mb-12 px-0">
+      <section class="flex flex-row justify-between">
+        <div class="pb-12 p-0 m-0 gap-4 max-w-prose">
+          <div>
+            <h1
+              class="select-none absolute blur-3xl pb-0 p-0 m-0 text-3xl md:text-5xl font-extrabold text-start
+          bg-gradient-to-r from-slate-200 via-slate-100 to-slate-500 inline-block
+          text-transparent bg-clip-text"
+            >
+              Opire:
+            </h1>
+            <h1
+              class="pb-0 p-0 m-0 text-3xl md:text-5xl font-extrabold text-start w-full
+          bg-gradient-to-r from-slate-200 via-slate-100 to-slate-500 inline-block
+          text-transparent bg-clip-text"
+            >
+              Opire:
+            </h1>
+          </div>
+          <div>
+            <h1
+              class="select-none absolute blur-3xl p-0 m-0 text-3xl md:text-5xl font-extrabold text-start bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+            >
+              Solutions.
+            </h1>
+            <h1
+              class="p-0 m-0 text-3xl md:text-5xl font-extrabold text-start w-full bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+            >
+              Solutions.
+            </h1>
+          </div>
+          <div>
+            <h1
+              class="select-none absolute blur-3xl p-0 m-0 text-3xl md:text-5xl font-extrabold text-start bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+            >
+              Contribute.
+            </h1>
+            <h1
+              class="p-0 m-0 text-3xl md:text-5xl font-extrabold text-start w-full bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+            >
+              Contribute.
+            </h1>
+          </div>
+          <div>
+            <h1
+              class="select-none absolute blur-3xl p-0 m-0 text-3xl md:text-5xl font-extrabold text-start bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+            >
+              Speed Up.
+            </h1>
+            <h1
+              class="p-0 m-0 text-3xl md:text-5xl font-extrabold text-start w-full bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+            >
+              Speed Up.
+            </h1>
+          </div>
+        </div>
+        <img
+          src="assets/gifs/home.gif"
+          alt=""
+          srcset=""
+          width="200px"
+          height="200px"
+          class="hidden md:flex aspect-square object-contain select-none"
+        />
+      </section>
+
+      <p
+        class="text-justify text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        Opire is the new platform where you can participate in new projects and
+        be rewarded as a developer, support projects and organizations as a
+        reward creator, and streamline the process of creating your own software
+        as a software owner.
+        <br />
+        <br />
+        Rewards for developers, help organizations or projects, help promote Open
+        Source, grow projects or organizations and more...
+
+        <br />
+        <br />
+        All this, here, in <Link
+          href="https://opire.dev/"
+          className="cursor-pointer text-lg text-sky-300"
+          client:visible>Opire</Link
+        >
+      </p>
+    </section>
+
+    <BeginButtons client:visible />
+
+    <InfoCard
+      title="For Devs"
+      titleClass="bg-gradient-to-l from-[#12b886] to-[#1098ad]"
+      description="Are you a developer and think you can help projects and people? Also, do you feel that you are not rewarded enough for the work you do on OpenSource solutions? \n \n Well Opire is for you, it allows you to participate in open source projects and solve problems in exchange for money."
+      imageSrc={"assets/images/home_00.png"}
+      linkTo="/developers"
+    />
+
+    <InfoCard
+      className="flex-row-reverse"
+      title="For Creators"
+      titleClass="bg-gradient-to-l from-[#12b886] to-[#1098ad]"
+      description="Do you love a project and think it has a great future? \n \n Would you like to support a project or expedite the fixing of issues or bugs as soon as possible? \n \n Create rewards on GitHub with Opire \n \n If Opire is installed on your favorite Github project, you can support it by sending money, or putting monetary rewards on issues."
+      imageSrc={"assets/images/home_02.png"}
+      linkTo="/owners"
+    />
+
+    <InfoCard
+      title="For Owners"
+      titleClass="bg-gradient-to-l from-[#12b886] to-[#1098ad]"
+      description="Do you own amazing software? Would you love the community to contribute to your software? \n \n Don't wait and install Opire on GitHub. \n \n With Opire you can allow people to financially support your project, in addition to encouraging developers to resolve issues in your project."
+      imageSrc={"assets/images/home_01.png"}
+      linkTo="/owners"
+    />
+  </main>
+</Layout>

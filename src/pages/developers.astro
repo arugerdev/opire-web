@@ -1,0 +1,113 @@
+---
+import DevsAcordeon from "../components/developers/DevsAcordeon";
+import Layout from "../layouts/Layout.astro";
+import { Button, Link, Image } from "@nextui-org/react";
+---
+
+<Layout title="Opire - For Devs">
+  <main
+    class="flex flex-col items-center justify-center margin-auto pt-24 pb-24 p-4 w-full text-white text-xl gap-32"
+  >
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <Image
+        client:visible
+        src="assets/images/devs_00.png"
+        isBlurred
+        className="w-[128px] md:w-auto"
+      />
+      <div>
+        <h1
+          class="select-none absolute blur-3xl p-0 m-0 text-3xl md:text-5xl font-extrabold text-start bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+        >
+          For Developers
+        </h1>
+        <h1
+          class="bg-gradient-to-l from-[#12b886] to-[#1098ad] pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+        >
+          For Developers
+        </h1>
+      </div>
+
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        As a developer you can use Opire for several benefits. You will also
+        help in projects by solving issues in the software.
+        <br />
+        <br />
+        Help the Open Source community grow, by participating in open source projects
+        you help the community and contribute your grain of sand.
+        <br />
+        <br />
+        If as a developer you want to help in projects, organizations or open source
+        software and you are interested in receiving something in return, Opire is
+        for you.
+      </p>
+    </section>
+
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <h1
+        class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+      >
+        Perks for Devs
+      </h1>
+      <DevsAcordeon client:visible />
+    </section>
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <h1
+        class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+      >
+        Start Right Now
+      </h1>
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        To start using Opire as a developer, below are a series of guidelines or
+        steps to follow to start participating in our platform:
+      </p>
+      <DevsAcordeon client:visible id={1} />
+    </section>
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <h1
+        class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+      >
+        Explore the opportunities
+      </h1>
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        Explore all of the opportunities in our app, also, you can see our docs
+        for more info.
+      </p>
+
+      <section class="flex flex-row gap-2 p-4">
+        <Button
+          as={Link}
+          href="https://app.opire.dev"
+          variant="solid"
+          color="primary"
+          className="px-8 py-6 font-bold text-base font-mono uppercase"
+        >
+          APP
+        </Button>
+        <Button
+          as={Link}
+          href="https://docs.opire.dev/es/overview/introduction"
+          variant="ghost"
+          color="primary"
+          className="px-8 py-6 font-bold text-base font-mono uppercase"
+        >
+          Documentation
+        </Button>
+      </section>
+    </section>
+  </main>
+</Layout>

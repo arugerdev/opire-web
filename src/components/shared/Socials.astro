@@ -1,0 +1,76 @@
+---
+import { Link, Image } from "@nextui-org/react";
+import { color } from "framer-motion";
+---
+
+<section
+  class="w-full items-center justify-center grid md:flex md:flex-row gap-6 p-6 font-mono"
+  style="grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));"
+>
+  <Link className="flex flex-col items-center justify-center" href="/">
+    <Image
+      isBlurred
+      src={"/assets/logos/big_logo.png"}
+      width={150}
+      height={50}
+      className="hidden md:flex opacity-100 cursor-pointer"
+      radius="none"
+    />
+    <Image
+      isBlurred
+      src={"/assets/logos/isotype.png"}
+      width={32}
+      className="md:hidden opacity-100 cursor-pointer"
+      radius="none"
+    />
+  </Link>
+
+  {
+    [
+      {
+        name: "EMAIL",
+        link: "mailto:opiredev@gmail.com",
+        color: "text-[#5cb248] hover:text-[#6bf1ba]",
+      },
+      {
+        name: "REDDIT",
+        link: "https://www.reddit.com/r/opire/",
+        color: "text-[#df7109] hover:text-[#ffcc82]",
+      },
+      {
+        name: "TWITTER",
+        link: "https://twitter.com/opire_dev",
+        color: "text-[#228cf1] hover:text-[#7ecef8]",
+      },
+      {
+        name: "THREADS",
+        link: "https://www.threads.net/@opiredev",
+        color: "text-[#eee] hover:text-[#888]",
+      },
+      {
+        name: "DISCORD",
+        link: "https://discord.gg/jWwwsHRbnJ",
+        color: "text-[#6374f3] hover:text-[#bda2f2]",
+      },
+      { name: "GITHUB", link: "https://github.com/Opire", color: "" },
+      {
+        name: "KOFI",
+        link: "https://ko-fi.com/opire",
+        color: "text-[#6acdb2] hover:text-[#75e1d4]",
+      },
+      { name: "PRIVACY POLICY", link: "/privacy-policy", color: "" },
+    ].map((item, index) => {
+      return (
+        <Link
+          key={item.name + "_" + index}
+          client:visible
+          href={item.link}
+          target="_blank"
+          className={`${item.color} hover:underline text-xs md:text-base w-fit text-center`}
+        >
+          {item.name}
+        </Link>
+      );
+    })
+  }
+</section>

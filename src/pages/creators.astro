@@ -1,0 +1,124 @@
+---
+import CreatorsAcordeon from "../components/creators/CreatorsAcordeon";
+import Layout from "../layouts/Layout.astro";
+import { Button, Link, Image } from "@nextui-org/react";
+---
+
+<Layout title="Opire - For Creators">
+  <main
+    class="flex flex-col items-center justify-center margin-auto pt-24 pb-24 p-4 w-full text-white text-xl gap-32"
+  >
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <Image
+        client:visible
+        src="assets/images/creators_00.png"
+        isBlurred
+        className="w-[128px] md:w-auto"
+      />
+      <div>
+        <h1
+          class="select-none absolute blur-3xl p-0 m-0 text-3xl md:text-5xl font-extrabold text-start bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+        >
+          For Creators
+        </h1>
+        <h1
+          class="bg-gradient-to-l from-[#12b886] to-[#1098ad] pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+        >
+          For Creators
+        </h1>
+      </div>
+
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        As a reward creator you can help projects and organizations of your
+        interest, by creating rewards for issues in projects you achieve several
+        positive impacts.
+        <br />
+        <br />
+        By incentivizing contributions, you can help the project grow and generate
+        positive growth for the project, organization, and open source community.
+        <br />
+        <br />
+        If you want to support your projects, organizations or even a favorite open
+        source software, in addition to encouraging its use, Opire is for you.
+      </p>
+    </section>
+
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <h1
+        class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+      >
+        Perks for Rewards Creators
+      </h1>
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        Offering rewards can be a valuable strategy for reward creators to
+        encourage contributions, foster innovation, and support the growth of
+        their projects:
+      </p>
+      <CreatorsAcordeon client:visible />
+    </section>
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <h1
+        class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+      >
+        Start Right Now
+      </h1>
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        To start using Opire as a rewards creators, below are a series of
+        guidelines or steps to follow to start creating rewards in projects with
+        Opire:
+      </p>
+      <CreatorsAcordeon client:visible id={1} />
+    </section>
+    <section
+      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    >
+      <h1
+        class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
+      >
+        Create new rewards
+      </h1>
+      <p
+        class="text-center text-slate-300 font-mono text-sm md:text-xl font-bold max-w-prose"
+      >
+        Contribute and help by creating rewards on project issues to grow and
+        improve the Open Source community and others projects with Opire.
+        <br />
+        <br />
+        You can see more information in our documentation.
+      </p>
+
+      <section class="flex flex-row gap-2 p-4">
+        <Button
+          as={Link}
+          href="https://app.opire.dev"
+          variant="solid"
+          color="primary"
+          className="px-8 py-6 font-bold text-base font-mono uppercase"
+        >
+          APP
+        </Button>
+        <Button
+          as={Link}
+          href="https://docs.opire.dev/es/overview/introduction"
+          variant="ghost"
+          color="primary"
+          className="px-8 py-6 font-bold text-base font-mono uppercase"
+        >
+          Documentation
+        </Button>
+      </section>
+    </section>
+  </main>
+</Layout>

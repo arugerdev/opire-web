@@ -1,0 +1,35 @@
+---
+import { Divider } from "@nextui-org/react";
+import Headbar from "../components/shared/Headbar.astro";
+import FAQ from "../components/faq/FAQ.astro";
+import Socials from "../components/shared/Socials.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="With Opire, anyone can create rewards for open source projects and grow their community, while developers can solve issues and earn the associated rewards."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="dark bg-[#121212] w-full min-w-screen h-full min-h-screen font-sans"
+  >
+    <Headbar />
+    <slot />
+    <FAQ />
+    <Socials />
+  </body>
+</html>
