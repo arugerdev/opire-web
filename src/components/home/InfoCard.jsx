@@ -14,7 +14,7 @@ export default function InfoCard ({
       class={`${className} flex flex-row w-full md:w-fit max-w-prose md:max-w-prose items-center justify-center gap-0 px-0 md:pd-16`}
     >
       <section class='flex flex-col items-center md:items-start gap-2 py-4 mb-12 px-0 max-w-[800px]'>
-        <div class='flex pb-12 p-0 m-0 gap-4 w-full items-center justify-center'>
+        <div class='flex pb-2 md:pb-12 p-0 m-0 gap-4 w-full items-center justify-center'>
           <h1
             class={`${titleClass} pb-0 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text`}
           >
