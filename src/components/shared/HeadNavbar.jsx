@@ -14,7 +14,7 @@ import {
 export default function HeadNavbar () {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
-  const menuItems = ['Developers', 'Owners', 'Creators']
+  const menuItems = ['Developers', 'Software Owners', 'Rewards Creators']
   const menuLinks = ['developers', 'owners', 'creators']
 
   return (
@@ -69,7 +69,7 @@ export default function HeadNavbar () {
             href='owners'
             size='lg'
           >
-            Owners
+            Software Owners
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
@@ -79,7 +79,7 @@ export default function HeadNavbar () {
             href='creators'
             size='lg'
           >
-            Creators
+            Rewards Creators
           </Link>
         </NavbarMenuItem>
       </NavbarContent>
