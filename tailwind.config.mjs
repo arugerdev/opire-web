@@ -13,6 +13,10 @@ export default {
           foreground: '#000',
           DEFAULT: '#FFF'
         }
+      },
+      backgroundImage: {
+        'top-bg': "url('/assets/images/top_bg.png')",
+        'bot-bg': "url('/assets/images/bottom_bg.png')"
       }
     }
   },
