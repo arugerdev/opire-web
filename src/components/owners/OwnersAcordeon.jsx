@@ -52,7 +52,7 @@ export default function OwnersAcordeon ({ id = 0 }) {
   ]
   const secondContent = [
     {
-      name: 'Install the app.',
+      name: 'Install the app',
       content: () => {
         return (
           <p>
@@ -70,7 +70,7 @@ export default function OwnersAcordeon ({ id = 0 }) {
       }
     },
     {
-      name: "Configure your organization's payment account.",
+      name: "Configure your organization's payment account",
       content: () => {
         return (
           <p>
@@ -91,7 +91,7 @@ export default function OwnersAcordeon ({ id = 0 }) {
       }
     },
     {
-      name: 'Create your first reward (or let others create it for you).',
+      name: 'Create your first reward (or let others create it for you)',
       content: () => {
         return (
           <p>

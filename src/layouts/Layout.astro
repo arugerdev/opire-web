@@ -24,11 +24,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="dark bg-[#121212] w-full min-w-screen h-full min-h-screen font-sans"
+    class="dark bg-[#121212] bg-no-repeat bg-contain bg-top bg-[url('assets/images/top_bg.png')] w-full min-w-screen h-full min-h-screen font-sans"
   >
-    <Headbar />
-    <slot />
-    <FAQ />
-    <Socials />
+    <main class="bg-no-repeat bg-contain bg-bottom bg-[url('assets/images/bottom_bg.png')] w-full h-full p-0 m-0">
+      <Headbar />
+      <slot />
+      <FAQ />
+      <Socials />
+    </main>
   </body>
 </html>
