@@ -1,16 +1,20 @@
 ---
 import { Accordion, AccordionItem, Link, Divider } from "@nextui-org/react";
 import FaqAcordeon from "./FaqAcordeon";
+import { motion } from "framer-motion";
 ---
 
-<section
-  class="flex flex-col w-full bg-[#000] drop-shadow-lg my-32 text-slate-50 items-center justify-center px-4 gap-12"
+<motion.section
+  client:visible
+  initial={{ opacity: 0, y: -30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  className="flex flex-col w-full bg-[#000] drop-shadow-lg my-32 text-slate-50 items-center justify-center px-4 gap-12"
 >
-  <Divider/>
+  <Divider />
   <h1
-  class="p-0 m-0 text-3xl md:text-5xl font-extrabold text-center w-full bg-gradient-to-r from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+    class="p-0 m-0 text-3xl md:text-5xl font-extrabold text-center w-full bg-gradient-to-r from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
   >
-  FAQ
+    FAQ
   </h1>
   <p
     class="text-justify text-slate-300 text-sm md:text-lg max-w-prose font-mono pb-12 font-bold"
@@ -24,6 +28,6 @@ import FaqAcordeon from "./FaqAcordeon";
       opiredev@gmail.com
     </Link>
   </p>
-  <FaqAcordeon client:visible />
-  <Divider/>
-</section>
+  <FaqAcordeon client:only />
+  <Divider />
+</motion.section>

@@ -4,15 +4,20 @@ export default function AcordeonCustom ({
   variant = '',
   className = '',
   fullWidth = false,
-  isCompact = false
+  isCompact = false,
+  selectionMode = 'single'
 }) {
+  const isMobile = window.matchMedia('(max-width: 770px)').matches
+
   return (
     <Accordion
       showDivider
       fullWidth={fullWidth}
       isCompact={isCompact}
       variant={variant}
+      selectionMode={selectionMode}
       className={className}
+      disableAnimation={isMobile}
       itemClasses={{
         title: 'font-bold text-sm md:text-base'
       }}

@@ -1,4 +1,5 @@
 ---
+import { motion } from "framer-motion";
 import OwnersAcordeon from "../components/owners/OwnersAcordeon";
 import Layout from "../layouts/Layout.astro";
 import { Button, Link, Image } from "@nextui-org/react";
@@ -8,8 +9,12 @@ import { Button, Link, Image } from "@nextui-org/react";
   <main
     class="flex flex-col items-center justify-center margin-auto pt-24 pb-24 p-4 w-full text-white text-xl gap-32"
   >
-    <section
-      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    <motion.section
+      client:visible
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", damping: 10, stiffness: 100 }}
+      className="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
     >
       <Image
         client:visible
@@ -46,10 +51,14 @@ import { Button, Link, Image } from "@nextui-org/react";
         If you are looking for something to achieve any of the aforementioned objectives,
         Opire is for you.
       </p>
-    </section>
+    </motion.section>
 
-    <section
-      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+    <motion.section
+      client:visible
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={undefined}
+      className="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
     >
       <h1
         class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
@@ -63,10 +72,14 @@ import { Button, Link, Image } from "@nextui-org/react";
         contributions to your project, leading to a more vibrant, productive,
         and sustainable open-source community:
       </p>
-      <OwnersAcordeon client:visible />
-    </section>
-    <section
-      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+      <OwnersAcordeon client:only />
+    </motion.section>
+    <motion.section
+      client:visible
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", damping: 10, stiffness: 100 }}
+      className="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
     >
       <h1
         class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
@@ -79,10 +92,14 @@ import { Button, Link, Image } from "@nextui-org/react";
         To start using Opire as a code owner, below are a series of guidelines
         or steps to follow to start using Opire in your projects:
       </p>
-      <OwnersAcordeon client:visible id={1} />
-    </section>
-    <section
-      class="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
+      <OwnersAcordeon client:only id={1} />
+    </motion.section>
+    <motion.section
+      client:visible
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", damping: 10, stiffness: 100 }}
+      className="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
     >
       <h1
         class="bg-gradient-to-l from-slate-50 via-slate-200 to-slate-400 pb-2 p-0 m-0 text-2xl md:text-5xl text-center font-extrabold w-full text-transparent bg-clip-text"
@@ -99,7 +116,12 @@ import { Button, Link, Image } from "@nextui-org/react";
         You can see more information in our documentation.
       </p>
 
-      <section class="flex flex-col md:flex-row gap-2 p-4">
+      <motion.section
+        client:visible
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="flex flex-col md:flex-row gap-2 p-4"
+      >
         <Button
           as={Link}
           href="https://app.opire.dev"
@@ -118,7 +140,7 @@ import { Button, Link, Image } from "@nextui-org/react";
         >
           Documentation
         </Button>
-      </section>
-    </section>
+      </motion.section>
+    </motion.section>
   </main>
 </Layout>

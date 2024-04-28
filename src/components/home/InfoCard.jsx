@@ -1,6 +1,5 @@
 import { Image, Button, Link } from '@nextui-org/react'
-import { any } from 'astro/zod'
-
+import { motion } from 'framer-motion'
 export default function InfoCard ({
   className = '',
   title = '',
@@ -10,7 +9,9 @@ export default function InfoCard ({
   imageSrc
 }) {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       class={`${className} flex flex-row w-full md:w-fit max-w-prose md:max-w-prose items-center justify-center gap-0 px-0 md:pd-16`}
     >
       <section class='flex flex-col items-center md:items-start gap-2 py-4 mb-12 px-0 max-w-[800px]'>
@@ -47,6 +48,6 @@ export default function InfoCard ({
         className='hidden md:flex opacity-100 p-12'
         width={248}
       />
-    </section>
+    </motion.section>
   )
 }

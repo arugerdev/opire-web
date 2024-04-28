@@ -1,8 +1,12 @@
 import { Button, Link } from '@nextui-org/react'
-
+import { motion } from 'framer-motion'
 export default function BeginButtons () {
   return (
-    <section class='flex flex-col p-12 gap-4'>
+    <motion.section
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className='flex flex-col p-12 gap-4'
+    >
       <Button
         as={Link}
         href='https://app.opire.dev'
@@ -21,6 +25,6 @@ export default function BeginButtons () {
       >
         Documentation
       </Button>
-    </section>
+    </motion.section>
   )
 }

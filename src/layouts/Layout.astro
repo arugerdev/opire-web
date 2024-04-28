@@ -23,6 +23,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+  <script>
+    import { MotionGlobalConfig } from "framer-motion";
+    const isMobile = window.matchMedia("(max-width: 770px)").matches;
+
+    MotionGlobalConfig.skipAnimations = isMobile;
+  </script>
   <body
     class="dark bg-[#121212] bg-no-repeat bg-contain bg-top bg-top-bg w-full min-w-screen h-full min-h-screen font-sans"
   >
@@ -30,7 +36,14 @@ const { title } = Astro.props;
       class="bg-no-repeat bg-contain bg-bottom bg-bot-bg w-full h-full p-0 m-0"
     >
       <Headbar />
+      <!-- <motion.section
+        client:visible
+        className="w-full h-full p-0 m-0"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      > -->
       <slot />
+      <!-- </motion.section> -->
       <FAQ />
       <Socials />
     </main>
