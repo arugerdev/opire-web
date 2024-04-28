@@ -7,8 +7,6 @@ export default function AcordeonCustom ({
   isCompact = false,
   selectionMode = 'single'
 }) {
-  const isMobile = window.matchMedia('(max-width: 770px)').matches
-
   return (
     <Accordion
       showDivider
@@ -17,7 +15,6 @@ export default function AcordeonCustom ({
       variant={variant}
       selectionMode={selectionMode}
       className={className}
-      disableAnimation={isMobile}
       itemClasses={{
         title: 'font-bold text-sm md:text-base'
       }}

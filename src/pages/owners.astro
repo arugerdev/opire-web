@@ -57,7 +57,7 @@ import { Button, Link, Image } from "@nextui-org/react";
       client:visible
       initial={{ opacity: 0, y: -30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={undefined}
+      transition={{ type: "spring", damping: 10, stiffness: 100 }}
       className="flex flex-col gap-6 items-center justify-center margin-auto w-full max-w-prose"
     >
       <h1
