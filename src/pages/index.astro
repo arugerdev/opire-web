@@ -15,9 +15,9 @@ import { motion } from "framer-motion";
       initial={{ opacity: 0, y: -30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", damping: 10, stiffness: 100 }}
-      className="flex flex-col gap-2 py-4 px-0"
+      className="flex flex-col gap-0 py-4 px-0"
     >
-      <section class="flex flex-row justify-between">
+      <section class="flex flex-col justify-between items-center">
         <div class="pb-12 p-0 m-0 gap-4 max-w-prose">
           <div>
             <h1
@@ -72,14 +72,132 @@ import { motion } from "framer-motion";
             </h1>
           </div>
         </div>
-        <img
+        <!-- <img
           src="assets/gifs/home2.gif"
           alt=""
           srcset=""
           width="200px"
           height="200px"
           class="hidden md:flex aspect-square object-contain select-none grayscale"
-        />
+        /> -->
+
+        <!-- Other form -->
+        <div class="card max-[300px]:hidden">
+          <div class="loader">
+            <p class="text-sm md:text-2xl text-nowrap">Opire can</p>
+            <div class="words">
+              <span
+                class="word text-sm md:text-2xl text-nowrap bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+                >promotes OpenSource</span
+              >
+              <span
+                class="word text-sm md:text-2xl text-nowrap bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+                >rewards Developers</span
+              >
+              <span
+                class="word text-sm md:text-2xl text-nowrap bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+                >improves the community</span
+              >
+              <span
+                class="word text-sm md:text-2xl text-nowrap bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+                >contributes to projects</span
+              >
+              <span
+                class="word text-sm md:text-2xl text-nowrap bg-gradient-to-l from-[#12b886] to-[#1098ad] inline-block text-transparent bg-clip-text"
+                >promotes OpenSource</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .card {
+            padding: 1rem 2rem;
+            border-radius: 1.25rem;
+          }
+          .loader {
+            color: rgb(210, 210, 210);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 40px;
+            padding: 10px 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-radius: 8px;
+          }
+
+          .words {
+            overflow: hidden;
+            position: relative;
+          }
+          .words::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+              var(#121212) 10%,
+              transparent 30%,
+              transparent 70%,
+              var(#121212) 90%
+            );
+            z-index: 20;
+          }
+
+          .word {
+            display: block;
+            height: 100%;
+            padding-left: 6px;
+            animation: spin_4991 6s infinite;
+          }
+
+          @keyframes spin_4991 {
+            10% {
+              -webkit-transform: translateY(-102%);
+              transform: translateY(-102%);
+            }
+
+            25% {
+              -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+            }
+
+            35% {
+              -webkit-transform: translateY(-202%);
+              transform: translateY(-202%);
+            }
+
+            50% {
+              -webkit-transform: translateY(-200%);
+              transform: translateY(-200%);
+            }
+
+            60% {
+              -webkit-transform: translateY(-302%);
+              transform: translateY(-302%);
+            }
+
+            75% {
+              -webkit-transform: translateY(-300%);
+              transform: translateY(-300%);
+            }
+
+            85% {
+              -webkit-transform: translateY(-402%);
+              transform: translateY(-402%);
+            }
+
+            100% {
+              -webkit-transform: translateY(-400%);
+              transform: translateY(-400%);
+            }
+          }
+        </style>
+
+        <!------->
       </section>
 
       <p
@@ -93,14 +211,6 @@ import { motion } from "framer-motion";
         <br />
         Rewards for developers, help organizations or projects, help promote Open
         Source, grow projects or organizations and more...
-
-        <br />
-        <br />
-        All this, here, in <Link
-          href="https://opire.dev/"
-          className="cursor-pointer text-lg text-sky-300"
-          client:visible>Opire</Link
-        >
       </p>
     </motion.section>
 
